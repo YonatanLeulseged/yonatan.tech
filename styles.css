@@ -72,6 +72,11 @@ body {
   text-decoration: none;
 }
 
+.header{
+ text-decoration: none;
+ color: white;
+}
+
 .resume{
   padding-bottom: 30px;
 }
