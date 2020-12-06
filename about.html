@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Projects | Yonatan Leulseged</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper">
+          <a href="index.html" title = "home">Home</a>
+        </div>
+
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="about.html" title = "projects">Projects</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="description">
+      <h2>Projects</h2>
+      <p>Here are a collections of projects I have made over this last year. Click on them and check it out!</p>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper a">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio5.jpg)"></div>
+
+          <div class="img-text-wrapper">
+            
+            <div class = "header">
+              <h3> Ticket Viewer</h3>
+            </div>
+            <div class="subtitle"> 
+              <p> <a target="_blank" rel="noopener noreferrer" href="https://github.com/YonatanLeulseged/TicketViewer"> A ticket viewer that connects to Zendesk's API to check status of support tickets </a> </p>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper b">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio6.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class = "header">
+              <h3> Electrical Web Service </h3>
+            </div>
+            <div class="subtitle">
+              <p> <a target="_blank" rel="noopener noreferrer" href="https://github.com/YonatanLeulseged/Electrical-Web-Service">  An Electrical Webservice that manages users and electrical plans</a> </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper c">
+          <div class="portfolio-img-background" style="background-image:url(images/portfolio13.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class = "header">
+              <h3> Portfolio Website</h3>
+            </div>
+            <div class="subtitle">
+              <p> <a target="_blank" rel="noopener noreferrer" href="https://github.com/YonatanLeulseged/Electrical-Web-Service">  My personal website was built with Javascript, HTML, and CSS </a> </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+</html>
